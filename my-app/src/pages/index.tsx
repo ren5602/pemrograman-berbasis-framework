@@ -13,7 +13,7 @@ export default function Home() {
       </head>
       <h1> Praktikum Next.Js Pages Router</h1><br />
       <p>Mahasiswa D4 Pengembangan Web</p>
-      <button className="btn btn-primary" onClick={() => window.location.href = "/about"}>About Me</button>
+      {/* <button className="btn btn-primary" onClick={() => window.location.href = "/about"}>About Me</button> */}
     </div>
   );
 }
