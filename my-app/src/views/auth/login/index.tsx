@@ -82,10 +82,31 @@ const TampilanLogin = () => {
             >
               {isLoading ? "Loading..." : "Login"}
             </button>
+            <br />
+            <br />
+            {/* Button Login Google */}
+            <button
+              onClick={() => signIn("google", { callbackUrl, redirect: false })}
+              className={style.login__form__item__button}
+              disabled={isLoading}
+            >
+              {isLoading ? "Loading..." : "Sign in with Google"}
+            </button>
+            <br />
+            <br />
+            {/* Button Login Github */}
+            <button
+              onClick={() => signIn("github", { callbackUrl, redirect: false })}
+              className={style.login__form__item__button}
+              disabled={isLoading}
+              type="button"
+            >
+              {isLoading ? "Loading..." : "sign in with github"}
+            </button>
           </form>
           <br />
           <p className={style.login__form__item__text}>
-            Sudah punya akun?{" "}
+            Belum punya akun?{" "}
             <Link href="/auth/register">Ke Halaman Register</Link>
           </p>
         </div>
