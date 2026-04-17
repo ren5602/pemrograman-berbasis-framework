@@ -11,7 +11,7 @@ const kategori = () => {
 const {data, error, isLoading}= useSWR("/api/produk", fetcher);
   return (
     <div>
-      <TampilanProduk products={isLoading? [] : data.data} />
+      <TampilanProduk products={isLoading? [] : data?.data} />
     </div>
   );
 };
