@@ -1,5 +1,6 @@
 import TampilanProduk from "../../views/product";
 import { ProductType } from "../../types/product.type";
+import { retrieveProducts } from "../../utils/db/servicefirebase";
 
 const halamanProdukServer = (props: { products: ProductType[] }) => {
     const { products } = props;
@@ -14,12 +15,10 @@ export default halamanProdukServer;
 
 // Fungsi getServerSideProps akan dipanggil setiap kali halaman ini diakses, dan akan mengambil data produk dari API sebelum merender halaman.
 export async function getServerSideProps() {
-    const res = await fetch("http://localhost:3000/api/produk");
-    const response = await res.json();
-    // console.log("Data produk yang diambil dari API", response);
+    const products = await retrieveProducts("products");
     return {
         props: {
-            products: response.data,
+            products,
         },
     }
 }

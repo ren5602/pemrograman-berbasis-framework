@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import AppShell from "@/components/layouts/AppShell";
+import AppShell from "@/components/layouts/Appshell";
 import { useRouter } from "next/router";
 import { SessionProvider } from "next-auth/react";
 
